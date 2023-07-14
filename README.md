@@ -4,8 +4,7 @@ This repository contains the implementation for LCNF introduced in the following
 
 [Local Conditional Neural Fields for Versatile and Generalizable Large-Scale Reconstructions in Computational Imaging](https://arxiv.org/abs/2307.06207)
 
-
-![overview](https://github.com/bu-cisl/LCNF/assets/56607928/592871be-ec9c-48c0-9c61-f9490fbda3c5)
+![overview](https://github.com/bu-cisl/LCNF/assets/56607928/686e26c2-065c-4002-b559-12c810011ced)
 
 ## Environment
 - Python 3.8.10
