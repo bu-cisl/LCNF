@@ -1,4 +1,4 @@
-# LCNF for large-scale phase retrival
+# LCNF for large-scale phase retrieval
 
 This repository contains the implementation for LCNF introduced in the following paper:
 
@@ -33,7 +33,7 @@ Once the network finished training, we will use the model saved in 'save/_test/e
 --output:  save reconstructed image
 
 ## Trained models
-To use our trained model, first download models (https://drive.google.com/drive/folders/1zIBaYvLkABGXDJFIzgbtJoXavZIBUmAU?usp=sharing), then change the --model name when run the inference_LCNF.py
+To use our trained models, first download models (https://drive.google.com/drive/folders/1zIBaYvLkABGXDJFIzgbtJoXavZIBUmAU?usp=sharing), then change the --model name to the trained models when running the inference_LCNF.py
 
 To request more data, please contact the author: Hao Wang, wanghao6@bu.edu
 
