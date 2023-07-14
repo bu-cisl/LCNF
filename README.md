@@ -26,7 +26,7 @@ Once the network finished training, we will use the model saved in 'save/_test/e
 
 --input:  input preprocessed low-resolution image
 
---model:  trained model, saved in the [save](save) folder
+--model:  trained model, will be saved in the [save](save) folder
 
 --resolution:  queried pixel resolution for high-resolution image
 
