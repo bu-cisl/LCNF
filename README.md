@@ -23,7 +23,7 @@ Here, we provide ethanol-fixed Hela cells at [Dataset](Dataset) for training (on
 ## Network Inference
 Run `python inference_LCNF.py --input Dataset/Inference/22.npy --model save/_test/epoch-best.pth --resolution 1500,1500 --output Inference/pred22.png`.
 
-Once the network finished training, we used the model saved in 'save/_test/epoch-best.pth' to reconstruct the high-resolution phase image. 
+Once the network finished training, we will use the model saved in 'save/_test/epoch-best.pth' to reconstruct the high-resolution phase image. 
 
 --input:  input preprocessed low-resolution image
 
