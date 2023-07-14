@@ -1,0 +1,80 @@
+train_dataset:
+  dataset:
+    name: paired-image-folders
+    args:
+      root_path_1: Dataset/Hela_E_single/train/low/
+      root_path_2: Dataset/Hela_E_single/train/high/
+      repeat: 100
+      cache: in_memory
+  wrapper:
+    name: sr-implicit-downsampled-pair-output
+    args:
+      inp_size: 48
+      scale_max:
+      augment: false
+      sample_q: 2304
+  batch_size: 5
+
+val_dataset:
+  dataset:
+    name: paired-image-folders
+    args:
+      root_path_1: Dataset/Hela_E_single/valid/low/
+      root_path_2: Dataset/Hela_E_single/valid/high/
+      first_k: 1
+      repeat: 50
+      cache: in_memory
+  wrapper:
+    name: sr-implicit-downsampled-pair-output
+    args:
+      inp_size: 48
+      scale_max:
+      augment: false
+      sample_q: 2304
+  batch_size: 5
+
+data_norm:
+  inp: {sub: [0], div: [1]}
+  gt: {sub: [0], div: [1]}
+
+model:
+  name: liif
+  args:
+    encoder_spec_BF:
+      name: edsr
+      args:
+        no_upsampling: true
+        input_channel: 2
+    encoder_spec_DF:
+      name: edsr
+      args:
+        no_upsampling: true
+        input_channel: 3
+    encoder_DPC:
+      name: edsr
+      args:
+        no_upsampling: true
+        input_channel: 1
+    imnet_spec:
+      name: mlp  # please only use mlp by now
+      args:
+        out_dim: 1
+        hidden_list: [256, 256, 256, 256, 256]
+        #scale: 1
+    coordencode: False   #the encoding part is under developing by now, don't use it.
+    radialencode: False
+
+optimizer:
+  name: adam
+  args:
+    lr: 1.e-4
+epoch_max: 5
+multi_step_lr:
+  mode: 'min'
+  factor: 0.2
+  patience: 10
+  threshold: 0.0001
+  threshold_mode: 'rel'
+
+epoch_val: 1
+epoch_save: 1
