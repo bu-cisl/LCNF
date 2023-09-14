@@ -1,4 +1,4 @@
-# NeuPh
+# LCNF
 
 This repository contains the implementation for LCNF introduced in the following paper:
 
