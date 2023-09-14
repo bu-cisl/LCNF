@@ -1,4 +1,4 @@
-# LCNF for large-scale phase retrieval
+# NeuPh
 
 This repository contains the implementation for LCNF introduced in the following paper:
 
