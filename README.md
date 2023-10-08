@@ -35,6 +35,7 @@ Once the network finished training, we will use the model saved in 'save/_test/e
 --resolution:  queried pixel resolution for high-resolution image
 
 --output:  path of reconstructed image
+
 Expected output is a high-resolution phase image with .png format. Expected inference time is around 30s.
 
 ## Trained models
