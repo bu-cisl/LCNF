@@ -14,7 +14,7 @@ The LCNF requires a standard computer with at least 16GB RAM and Nvidia GPU with
 - pytorch 1.13.1
 - TensorboardX
 - PyYAML, numpy, tqdm, imageio
-  
+
 The typical install time on a normal desktop computer is about 1 hour.
 
 ## Network Training
